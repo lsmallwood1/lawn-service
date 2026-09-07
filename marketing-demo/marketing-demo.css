@@ -1,0 +1,271 @@
+/* ==========================================================================
+   Marketing Demo page — scoped styles
+   Only loaded on /marketing-demo/. Reuses tokens & utility classes from
+   /css/styles.css (colors, radius, shadow, container, kicker, btn, pill,
+   section-head, reveal, etc.) — nothing here redefines the global system.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------- */
+/* Social campaign — two square post mockups, side by side on desktop     */
+/* ---------------------------------------------------------------------- */
+.social-grid{ margin-top:clamp(32px,5vw,56px); max-width:920px; margin-inline:auto; }
+
+.social-post{ display:flex; flex-direction:column; gap:14px; }
+.social-post__frame{
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+  background:var(--gk-white);
+  line-height:0;
+}
+.social-post__img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  background:var(--gk-white);
+}
+.social-post__label{ text-align:center; }
+.social-post__tag{
+  display:block;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.social-post__title{
+  display:block;
+  margin-top:2px;
+  font-size:.9rem;
+  font-weight:700;
+  color:var(--ink);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Automation workflow — one wide diagram, opens full-size on click       */
+/* ---------------------------------------------------------------------- */
+.workflow-figure{ margin-top:clamp(32px,5vw,56px); }
+.workflow-figure__link{
+  display:block;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  line-height:0;
+  cursor:zoom-in;
+}
+.workflow-figure__img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.workflow-figure__hint{
+  margin-top:14px;
+  text-align:center;
+  font-size:.8rem;
+  color:var(--ink-soft);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Email preview card                                                     */
+/* ---------------------------------------------------------------------- */
+.email-demo-wrap{
+  display:flex;
+  justify-content:center;
+  margin-top:clamp(32px,5vw,56px);
+}
+
+.email-preview{
+  width:min(640px, 100%);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  background:var(--gk-white);
+  border:1px solid var(--gk-line);
+  box-shadow:var(--shadow-lg);
+}
+
+/* Small "browser/app chrome" strip so the card reads as a client, not a page */
+.email-preview__chrome{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:12px 18px;
+  background:var(--gk-cream-2);
+  border-bottom:1px solid var(--gk-line);
+}
+.email-preview__dot{ width:9px; height:9px; border-radius:50%; flex:none; }
+.email-preview__dot--a{ background:#EF6B5B; }
+.email-preview__dot--b{ background:#F2B33D; }
+.email-preview__dot--c{ background:#6FBF73; }
+.email-preview__chrome-label{
+  margin-left:auto;
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+
+/* Email client header: from / subject / preview text */
+.email-preview__meta{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:16px 20px;
+  border-bottom:1px solid var(--gk-line);
+}
+.email-preview__avatar{
+  width:34px; height:34px; border-radius:50%;
+  background:var(--gk-green-deep);
+  display:flex; align-items:center; justify-content:center;
+  flex:none;
+}
+.email-preview__avatar svg{ width:20px; height:20px; }
+.email-preview__meta-text{ min-width:0; flex:1; }
+.email-preview__from-row{ display:flex; align-items:baseline; gap:8px; }
+.email-preview__from-name{ font-weight:800; font-size:.88rem; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.email-preview__time{ margin-left:auto; flex:none; font-size:.72rem; color:var(--ink-soft); }
+.email-preview__subject{ margin-top:3px; font-weight:700; font-size:.92rem; color:var(--ink); line-height:1.4; }
+.email-preview__preheader{ margin-top:2px; font-size:.82rem; color:var(--ink-soft); line-height:1.4; }
+
+/* The branded HTML email itself */
+.email-body{
+  padding:clamp(28px,6vw,44px) clamp(20px,5vw,40px) clamp(32px,5vw,48px);
+}
+
+.email-body__brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:clamp(20px,4vw,28px);
+}
+.email-body__brand svg{ width:30px; height:30px; flex:none; }
+.email-body__brand-name{
+  font-family:var(--font-head);
+  font-weight:700;
+  font-size:1.05rem;
+  color:var(--gk-green-deep);
+  line-height:1.15;
+}
+.email-body__brand-name small{
+  display:block;
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:.62rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+
+.email-badge-row{ text-align:center; margin-bottom:16px; }
+.email-badge{
+  display:inline-flex;
+  align-items:center;
+  background:var(--gk-lime);
+  color:var(--gk-green-deep);
+  border-radius:999px;
+  padding:6px 16px;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.email-body h1{
+  font-family:var(--font-head);
+  font-weight:700;
+  text-align:center;
+  color:var(--ink);
+  font-size:clamp(1.5rem, 5vw, 2.05rem);
+  line-height:1.15;
+  max-width:26ch;
+  margin:0 auto 18px;
+}
+
+.email-body p{
+  font-size:.98rem;
+  line-height:1.65;
+  color:var(--gk-charcoal-2);
+}
+.email-body p + p{ margin-top:14px; }
+
+.email-services{
+  list-style:none;
+  margin:24px 0 0;
+  padding:18px 20px;
+  background:var(--gk-cream-2);
+  border-radius:var(--radius-md);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.email-services li{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  font-size:.92rem;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.5;
+}
+.email-services li::before{
+  content:"\2713";
+  flex:none;
+  color:var(--gk-green);
+  font-weight:800;
+}
+
+.email-cta-row{ text-align:center; margin:28px 0 4px; }
+.email-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:.5em;
+  background:var(--accent);
+  color:var(--gk-green-deep);
+  border-radius:999px;
+  padding:15px 28px;
+  font-weight:700;
+  font-size:.9rem;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  box-shadow:var(--shadow-md);
+}
+
+.email-callout{
+  margin-top:clamp(24px,5vw,36px);
+  background:var(--gk-sage-light);
+  border-radius:var(--radius-md);
+  padding:clamp(20px,4vw,28px);
+  text-align:center;
+}
+.email-callout h2{
+  font-family:var(--font-head);
+  font-size:1.15rem;
+  color:var(--gk-green-deep);
+  margin-bottom:8px;
+}
+.email-callout p{ font-size:.9rem; color:var(--gk-charcoal-2); }
+
+.email-footer{
+  margin-top:clamp(28px,5vw,40px);
+  padding-top:20px;
+  border-top:1px solid var(--gk-line);
+  text-align:center;
+}
+.email-footer p{ font-size:.82rem; color:var(--ink-soft); line-height:1.5; }
+.email-footer p + p{ margin-top:6px; }
+.email-disclosure{
+  margin-top:14px;
+  font-size:.72rem;
+  color:var(--ink-soft);
+  font-style:italic;
+  line-height:1.5;
+}
+
+@media (max-width:480px){
+  .email-preview__meta{ padding:14px 16px; }
+  .email-preview__chrome{ padding:10px 14px; }
+  .email-preview__from-name{ max-width:120px; }
+}

@@ -254,7 +254,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .mobile-cta{ margin-top:24px; display:flex; flex-direction:column; gap:12px; }
 .mobile-cta .header-phone{ justify-content:center; padding:14px; background:var(--gk-white); border-radius:14px; }
 
-@media (min-width:960px){
+@media (min-width:1200px){
   .main-nav{ display:block; }
   .header-cta{ display:flex; }
   .nav-toggle{ display:none; }
@@ -923,7 +923,7 @@ noscript .js-only{ display:none; }
 }
 .mobile-sticky-cta svg{ width:18px; height:18px; color:var(--gk-lime); flex:none; }
 .nav-open .mobile-sticky-cta{ display:none !important; }
-@media (max-width:959px){
+@media (max-width:1199px){
   body.has-sticky-cta{ padding-bottom:64px; }
   .mobile-sticky-cta{ display:flex; }
 }
@@ -1233,7 +1233,7 @@ main > .breadcrumbs:first-child{ display:none; }
 }
 
 /* Final mobile navigation and hero-flow corrections. */
-@media (max-width:959px){
+@media (max-width:1199px){
   .site-header,
   .site-header.is-scrolled,
   .nav-open .site-header{

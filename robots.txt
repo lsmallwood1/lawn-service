@@ -1,4 +1,5 @@
 User-agent: *
-Allow: /
+
+Disallow: /
 
 Sitemap: https://lawn-service.lostadigitdigital.com/sitemap.xml
