@@ -1443,6 +1443,7 @@ main > .breadcrumbs:first-child{ display:none; }
   .page-hero > .container{ padding-block:clamp(24px,3vw,40px); }
   .hero__eyebrow,
   .service-hero__content .kicker{ margin-bottom:16px; }
+  .hero__eyebrow{ padding-top:15px; }
   .hero__content p,
   .service-hero__content p,
   .page-hero p{ margin-top:14px; }
