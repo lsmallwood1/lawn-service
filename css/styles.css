@@ -1030,14 +1030,13 @@ main > .breadcrumbs:first-child{ display:none; }
 }
 
 /* One entry system across home, About, and every service page:
-   hero + proof stripe equals exactly one visible viewport. */
+   hero + proof stripe target one visible viewport, but the hero grows
+   past that floor instead of clipping when content needs more room. */
 :root{ --entry-trust-h:92px; }
 .hero,
 .service-hero,
 .page-hero{
-  height:calc(100svh - var(--entry-trust-h));
-  min-height:0;
-  max-height:none;
+  min-height:calc(100svh - var(--entry-trust-h));
 }
 .page-hero{
   display:flex;
@@ -1046,7 +1045,6 @@ main > .breadcrumbs:first-child{ display:none; }
   padding-bottom:0;
 }
 .trust-strip__inner{
-  height:var(--entry-trust-h);
   min-height:var(--entry-trust-h);
   padding-block:10px;
 }
@@ -1056,12 +1054,10 @@ main > .breadcrumbs:first-child{ display:none; }
   .hero,
   .service-hero,
   .page-hero{
-    height:calc(100svh - var(--entry-trust-h));
-    min-height:0;
+    min-height:calc(100svh - var(--entry-trust-h));
   }
   .trust-strip__inner{
     grid-template-columns:repeat(2,minmax(0,1fr));
-    height:var(--entry-trust-h);
     min-height:var(--entry-trust-h);
     padding-block:0;
   }
@@ -1273,9 +1269,6 @@ main > .breadcrumbs:first-child{ display:none; }
 /* Final proportional scale adjustment: +7% without changing the
    hero + trust-stripe one-viewport composition above. */
 .hero__content{ width:min(770px, calc(100% - 2 * var(--gutter))); }
-.hero__content,
-.service-hero__content,
-.page-hero > .container{ transform:translateY(56px); }
 .hero__content h1,
 .service-hero__content h1,
 .page-hero h1{ font-size:clamp(3.2rem,5.35vw,5.35rem); }
