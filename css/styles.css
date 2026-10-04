@@ -1432,3 +1432,21 @@ main > .breadcrumbs:first-child{ display:none; }
   .services-hero > .container{ transform:none; }
   .services-hero .kicker{ margin-bottom:28px; }
 }
+
+/* Tighten hero vertical spacing on desktop/tablet so the CTA row stays
+   above the fold on shorter real-world viewports (browser chrome, a
+   non-maximized window) now that the hero grows instead of clipping.
+   Copy, typography, and layout are unchanged - only the gaps shrink. */
+@media (min-width:720px){
+  .hero__content,
+  .service-hero__content,
+  .page-hero > .container{ padding-block:clamp(24px,3vw,40px); }
+  .hero__eyebrow,
+  .service-hero__content .kicker{ margin-bottom:16px; }
+  .hero__content p,
+  .service-hero__content p,
+  .page-hero p{ margin-top:14px; }
+  .hero__content .hero__ctas,
+  .service-hero__content .hero__ctas,
+  .page-hero .hero__ctas{ margin-top:20px; gap:14px; }
+}
